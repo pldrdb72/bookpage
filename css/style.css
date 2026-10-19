@@ -19,7 +19,6 @@
 }
 
 body {
-    /* Мягкий, благородный градиент: от нежно-серого к легкому бирюзово-голубому оттенку */
     background: linear-gradient(180deg, #deeef8 0%, #dde4eb 50%, #bddbee 100%);
     background-attachment: fixed; /* Градиент красиво растягивается и не рвется при скролле */
     color: var(--text-dark);
@@ -861,5 +860,167 @@ body {
     }
     .about-map-container {
         position: static;
+    }
+}
+
+/* ==========================================================================
+   ПОЛНАЯ АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ (Экраны до 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 1. Корректировка контейнера, чтобы не было полосы прокрутки */
+    .container {
+        width: 92%;
+        padding: 0 4px;
+    }
+
+    /* 2. Адаптивная шапка сайта (Header) */
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        width: 100%;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .btn-nav-link {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    /* 3. Главный баннер (Hero) */
+    .hero-banner {
+        padding: 35px 20px;
+        margin: 15px 0;
+    }
+
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+
+    /* 4. Поиск на главной странице */
+    .main-search-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main-search-form .btn {
+        width: 100%;
+    }
+
+    /* 5. Блоки преимуществ и категорий перестраиваем в 1 колонку */
+    .features-badges, 
+    .sections-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px;
+    }
+
+    /* 6. Сетка каталога (Каталог товаров) */
+    .catalog-grid {
+        grid-template-columns: 1fr !important; /* На мобилке по одному товару в ряд для удобства */
+        gap: 20px;
+    }
+
+    .book-card {
+        height: auto;
+        min-height: auto;
+    }
+
+    .book-img {
+        height: 220px; /* На весь экран смартфона обложка будет крупнее и красивее */
+    }
+
+    /* 7. Управление фильтрами */
+    .controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .controls input, 
+    .controls select {
+        width: 100%;
+    }
+
+    /* 8. Карточка товара (product.html) */
+    .product-page-layout {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .product-media {
+        padding: 10px;
+    }
+
+    .product-main-img {
+        max-height: 280px;
+    }
+
+    .product-details h2 {
+        font-size: 1.5rem;
+    }
+
+    .product-actions-box {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .product-actions-box .btn {
+        max-width: 100% !important;
+    }
+
+    /* 9. Корзина (cart.html) */
+    .cart-layout {
+        grid-template-columns: 1fr !important;
+        gap: 25px;
+    }
+
+    .cart-item-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .btn-delete {
+        width: 100%;
+        background: #fff5f5;
+        padding: 8px 0;
+    }
+
+    /* 10. Формы рассылки и обратной связи */
+    .newsletter-form {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .newsletter-form .btn {
+        width: 100%;
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr !important;
+        gap: 30px;
+    }
+
+    .about-map-container {
+        position: static !important;
     }
 }
