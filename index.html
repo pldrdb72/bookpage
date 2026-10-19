@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ООО «БукСтраница» — Книжный магазин</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-block">
+                <!-- Путь к твоему логотипу -->
+                <img src="img/logo.png" alt="Логотип БукСтраница" class="main-logo">
+                <div class="logo-text">
+                    <h1>БукСтраница</h1>
+                    <span>Интернет-магазин литературы</span>
+                </div>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link active">Главная</a>
+                <a href="about.html" class="nav-link">О нас</a>
+                <a href="catalog.html" class="nav-link">Каталог</a>
+                <a href="cart.html" class="nav-link cart-link">
+                    <!-- Иконка корзины (например, шоппер или тележка) -->
+                    <img src="img/icon-cart.png" alt="Корзина" class="nav-icon">
+                    <span>Корзина (<span id="cart-count">0</span>)</span>
+                </a>
+                <a href="register.html" class="btn-nav-link">Регистрация</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <!-- Главный сочный баннер -->
+        <section class="hero-banner">
+            <div class="hero-content">
+                <h2>Яркие истории ждут тебя!</h2>
+                <p>Огромный выбор печатных книг, трендовой канцелярии и товаров для творчества в магазине «БукСтраница».</p>
+                <a href="catalog.html" class="btn btn-accent">Перейти в каталог</a>
+            </div>
+        </section>
+
+        <!-- Интерактивный блок поиска на Главной -->
+        <section class="search-section">
+            <div class="search-box">
+                <h3>Быстрый поиск книги</h3>
+                <form action="catalog.html" method="GET" class="main-search-form">
+                    <input 
+                        type="text" 
+                        name="search" 
+                        id="main-search-input" 
+                        placeholder="Введите название книги или автора..." 
+                        required
+                    >
+                    <button type="submit" class="btn btn-primary">Найти</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Блок Преимуществ (для солидности и красоты) -->
+        <section class="features-badges">
+            <div class="feature-item">
+                <img src="img/icon-delivery.jpg" alt="Доставка" class="feature-icon">
+                <div class="feature-text">
+                    <h4>Быстрая доставка</h4>
+                    <p>По всей России от 2 дней</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <img src="img/icon-wallet.png" alt="Цены" class="feature-icon">
+                <div class="feature-text">
+                    <h4>Выгодные цены</h4>
+                    <p>Скидки постоянным клиентам</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <img src="img/icon-star.png" alt="Качество" class="feature-icon">
+                <div class="feature-text">
+                    <h4>Лучший выбор</h4>
+                    <p>Только топовые издательства</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Разделы магазина -->
+        <h2 class="section-title">Популярные категории</h2>
+        <section class="sections-grid">
+            <a href="catalog.html?category=fiction" class="section-card">
+                <div class="icon-wrapper">
+                    <img src="img/icon-book.jpg" alt="Художественная литература" class="card-icon">
+                </div>
+                <h3>Художественная</h3>
+                <p>Романы, детективы, фантастика</p>
+            </a>
+            <a href="catalog.html?category=study" class="section-card">
+                <div class="icon-wrapper">
+                    <img src="img/icon-study.png" alt="Учеба и бизнес" class="card-icon">
+                </div>
+                <h3>Учеба и бизнес</h3>
+                <p>Учебники, пособия, саморазвитие</p>
+            </a>
+            <a href="catalog.html?category=stationery" class="section-card">
+                <div class="icon-wrapper">
+                    <img src="img/icon-pencil.jpg" alt="Канцелярия" class="card-icon">
+                </div>
+                <h3>Канцелярия</h3>
+                <p>Ручки, блокноты, для творчества</p>
+            </a>
+        </section>
+
+        <!-- Блок Горячие Скидки (Товары выводятся из JS) -->
+        <h2 class="section-title">Актуальные скидки недели</h2>
+        <section class="catalog-grid" id="sale-grid">
+            <!-- JS сгенерирует акционные карточки товаров -->
+        </section>
+
+        <!-- Форма подписки с жестким стандартом ввода (валидацией) -->
+        <section class="newsletter-block">
+            <h3>Узнавайте о скидках первыми</h3>
+            <p>Подпишитесь на нашу рассылку и получите скидку 10% на первый заказ!</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <div class="input-group">
+                    <input 
+                        type="email" 
+                        id="newsletterEmail"
+                        placeholder="username@example.com" 
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                        title="Пожалуйста, введите корректный адрес электронной почты (например, user@mail.ru)"
+                        required
+                    >
+                    <span class="error-message" id="emailError"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">Подписаться</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 ООО «БукСтраница». г. Энгельс, ул. Тельмана, д. 25. +7 (8453) 55-00-25. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товаров — ООО «БукСтраница»</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-block">
+                <img src="img/logo.png" alt="Логотип БукСтраница" class="main-logo">
+                <div class="logo-text">
+                    <h1>БукСтраница</h1>
+                    <span>Интернет-магазин литературы</span>
+                </div>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="about.html" class="nav-link">О нас</a>
+                <a href="catalog.html" class="nav-link active">Каталог</a>
+                <a href="cart.html" class="nav-link cart-link">
+                    <img src="img/icon-cart.png" alt="Корзина" class="nav-icon">
+                    <span>Корзина (<span id="cart-count">0</span>)</span>
+                </a>
+                <a href="register.html" class="btn-nav-link">Регистрация</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <h2 class="section-title">Каталог продукции</h2>
+        
+        <!-- Панель фильтров и поиска -->
+            <div class="controls">
+                <input 
+                    type="text" 
+                    id="search-input" 
+                    placeholder="Поиск по названию или автору..." 
+                    autocomplete="off"
+                >
+                <select id="genre-filter">
+                    <option value="all">Все категории</option>
+                    <option value="fiction">Художественная литература</option>
+                    <option value="study">Учеба и бизнес</option> <!-- Вернули 'study' для синхронизации с JS -->
+                    <option value="stationery">Канцелярия</option>
+                </select>
+            </div>
+
+        <!-- Полноценная сетка товаров -->
+        <section class="catalog-grid" id="catalog-grid">
+            <!-- Карточки генерируются скриптом script.js -->
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 ООО «БукСтраница». г. Энгельс, ул. Тельмана, д. 25. +7 (8453) 55-00-25. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Информация о товаре — ООО «БукСтраница»</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-block">
+                <img src="img/logo.png" alt="Логотип БукСтраница" class="main-logo">
+                <div class="logo-text">
+                    <h1>БукСтраница</h1>
+                    <span>Интернет-магазин литературы</span>
+                </div>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="about.html" class="nav-link">О нас</a>
+                <a href="catalog.html" class="nav-link">Каталог</a>
+                <a href="cart.html" class="nav-link cart-link">
+                    <img src="img/icon-cart.png" alt="Корзина" class="nav-icon">
+                    <span>Корзина (<span id="cart-count">0</span>)</span>
+                </a>
+                <a href="register.html" class="btn-nav-link">Регистрация</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <!-- Блок сообщения об ошибке (изначально скрыт) -->
+        <div id="product-error" style="display: none; text-align: center; padding: 50px 0;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 12px;">Товар не найден</h3>
+            <p style="color: var(--text-muted); margin-bottom: 24px;">Извините, запрашиваемый товар не существует, был удален или перенесен.</p>
+            <a href="catalog.html" class="btn btn-primary" style="max-width: 200px; margin: 0 auto;">Вернуться в каталог</a>
+        </div>
+
+        <!-- Основная разметка карточки товара -->
+        <div id="product-layout-box" class="product-page-layout">
+            <div class="product-media">
+                <img id="p-img" src="img/logo.png" alt="Обложка книги" class="product-main-img">
+            </div>
+            <div class="product-details">
+                <h2 id="p-title">Название книги</h2>
+                <div id="p-author" class="author">Автор книги</div>
+                
+                <div class="product-meta">
+                    <p><strong>Категория:</strong> <span id="p-genre">Литература</span></p>
+                    <p><strong>Доступность:</strong> <span id="p-stock">Определяется...</span></p>
+                    <p><strong>Доставка:</strong> Возможна курьерская доставка или самовывоз (г. Энгельс)</p>
+                </div>
+
+                <div class="product-description">
+                    <h3 style="font-size: 1.15rem; margin-bottom: 8px; color: var(--text-dark);">Аннотация и описание</h3>
+                    <p id="p-annotation">Текст аннотации...</p>
+                </div>
+
+                <div class="product-actions-box">
+                    <div class="price-display">
+                        <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">Цена:</span>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <span id="p-price" class="current-price">0 ₽</span>
+                            <span id="p-old-price" class="old-price" style="font-size: 1.1rem; display: none;">0 ₽</span>
+                        </div>
+                    </div>
+                    <button id="p-buy-btn" class="btn btn-primary">Добавить в корзину</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 ООО «БукСтраница». г. Энгельс, ул. Тельмана, д. 25. +7 (8453) 55-00-25. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация — ООО «БукСтраница»</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-block">
+                <img src="img/logo.png" alt="Логотип БукСтраница" class="main-logo">
+                <div class="logo-text">
+                    <h1>БукСтраница</h1>
+                    <span>Интернет-магазин литературы</span>
+                </div>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="about.html" class="nav-link">О нас</a>
+                <a href="catalog.html" class="nav-link">Каталог</a>
+                <a href="cart.html" class="nav-link cart-link">
+                    <img src="img/icon-cart.png" alt="Корзина" class="nav-icon">
+                    <span>Корзина (<span id="cart-count">0</span>)</span>
+                </a>
+                <a href="register.html" class="btn-nav-link" style="background: var(--primary); color: #fff;">Регистрация</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <!-- Ограничиваем ширину контейнера формы, чтобы она выглядела аккуратно по центру -->
+        <div class="feedback-section" style="max-width: 450px; margin: 40px auto 0 auto;">
+            <h3 style="margin-bottom: 6px; text-align: center;">Создать аккаунт</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; text-align: center; margin-bottom: 24px;">
+                Зарегистрируйтесь для быстрого оформления заказов.
+            </p>
+            
+            <form id="reg-page-form">
+                <div class="form-group">
+                    <label for="reg-email">Электронная почта *</label>
+                    <input 
+                        type="email" 
+                        id="reg-email" 
+                        required 
+                        placeholder="username@mail.ru"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="reg-pass">Пароль *</label>
+                    <input 
+                        type="password" 
+                        id="reg-pass" 
+                        required 
+                        minlength="6" 
+                        placeholder="Минимум 6 символов"
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="reg-pass-confirm">Подтвердите пароль *</label>
+                    <input 
+                        type="password" 
+                        id="reg-pass-confirm" 
+                        required 
+                        placeholder="Повторите ввод пароля"
+                    >
+                </div>
+                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Зарегистрироваться</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 ООО «БукСтраница». г. Энгельс, ул. Тельмана, д. 25. +7 (8453) 55-00-25. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

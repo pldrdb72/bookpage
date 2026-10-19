@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас — ООО «БукСтраница»</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-block">
+                <img src="img/logo.png" alt="Логотип БукСтраница" class="main-logo">
+                <div class="logo-text">
+                    <h1>БукСтраница</h1>
+                    <span>Интернет-магазин литературы</span>
+                </div>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="about.html" class="nav-link active">О нас</a>
+                <a href="catalog.html" class="nav-link">Каталог</a>
+                <a href="cart.html" class="nav-link cart-link">
+                    <img src="img/icon-cart.png" alt="Корзина" class="nav-icon">
+                    <span>Корзина (<span id="cart-count">0</span>)</span>
+                </a>
+                <a href="register.html" class="btn-nav-link">Регистрация</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <h2 class="section-title">О компании ООО «БукСтраница»</h2>
+        
+        <div class="about-layout">
+            <!-- Левая колонка: Информация об организации и форма -->
+            <section class="about-info">
+                <p style="margin-bottom: 20px; font-size: 1.05rem; color: #475569;">Мы — современная торговая платформа, объединяющая уютный стационарный магазин в Энгельсе и удобный онлайн-каталог.</p>
+                
+                <div class="info-card">
+                    <h4>Наш address:</h4>
+                    <p>г. Энгельс, ул. Тельмана, д. 25</p>
+                </div>
+
+                <div class="info-card">
+                    <h4>Режим работы и поддержка:</h4>
+                    <p>Работаем для вас <strong>ежедневно с 09:00 до 21:00</strong>.</p>
+                    <p style="margin-top:5px; font-size:0.9rem; color:var(--text-muted);">Email: support@book-page.ru</p>
+                </div>
+
+                <!-- Форма обратной связи -->
+                <div class="feedback-section">
+                    <div class="form-container">
+                        <h3>Форма обратной связи</h3>
+                        <form id="feedback-form">
+                            <div class="form-group">
+                                <label for="fb-name">Ваше имя *</label>
+                                <input 
+                                    type="text" 
+                                    id="fb-name" 
+                                    required 
+                                    minlength="2"
+                                    pattern="^[A-Za-zА-Яа-яЁё\s\-]+$"
+                                    title="Имя должно содержать не менее 2 символов и состоять только из букв"
+                                    placeholder="Имя"
+                                >
+                            </div>
+                            <div class="form-group">
+                                <label for="fb-phone">Номер телефона *</label>
+                                <input 
+                                    type="tel" 
+                                    id="fb-phone" 
+                                    required 
+                                    placeholder="+7 (___) ___-__-__"
+                                    maxlength="18"
+                                >
+                            </div>
+                            <div class="form-group">
+                                <label for="fb-message">Сообщение или заявка на бронирование *</label>
+                                <textarea 
+                                    id="fb-message" 
+                                    rows="4" 
+                                    required
+                                    minlength="10"
+                                    placeholder="Укажите интересующие книги или ваш подробный вопрос (минимум 10 символов)..."
+                                ></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-accent">Отправить запрос</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Правая колонка: Интерактивная карта Google Maps -->
+            <section class="about-map-container">
+                <h4 style="margin-bottom:15px; font-size: 1.1rem;">Интерактивная карта проезда</h4>
+                <div class="map-wrapper">
+                    <!-- Полноценный стабильный iframe Google Maps, отцентрированный на ул. Тельмана, 25 в Энгельсе -->
+                    <iframe 
+                        src="https://google.com" 
+                        width="100%" 
+                        height="380" 
+                        style="border:0; display: block;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 ООО «БукСтраница». г. Энгельс, ул. Тельмана, д. 25. +7 (8453) 55-00-25. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
